@@ -105,8 +105,21 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Demo booking CTA */}
+            <div className="mt-6" style={{ animation: "fadeInUp 0.7s ease-out 700ms both" }}>
+              <Link
+                href="/demo-booking"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-zinc-200 text-sm font-semibold text-zinc-600 hover:text-[#0f172a] hover:border-zinc-300 transition-colors"
+              >
+                {isEn ? "Try a Demo Booking" : "Prueba una Reserva Demo"}
+              </Link>
+              <p className="text-[11px] text-zinc-400 mt-2">
+                {isEn ? "Demo only — no real appointment is created." : "Solo demo — no se crea una cita real."}
+              </p>
+            </div>
+
             {/* Social link */}
-            <div className="mt-8" style={{ animation: "fadeInUp 0.7s ease-out 750ms both" }}>
+            <div className="mt-6" style={{ animation: "fadeInUp 0.7s ease-out 800ms both" }}>
               <a
                 href="https://instagram.com/citabooking"
                 target="_blank"
@@ -151,6 +164,9 @@ export default function Home() {
             </Link>
             <Link href="/privacy" className="text-zinc-500 hover:text-[#0f172a] text-sm font-medium transition-colors">
               {isEn ? "Privacy Policy" : "Pol\u00edtica de Privacidad"}
+            </Link>
+            <Link href="/messaging-policy" className="text-zinc-500 hover:text-[#0f172a] text-sm font-medium transition-colors">
+              {isEn ? "Messaging Policy" : "Pol\u00edtica de Mensajer\u00eda"}
             </Link>
             <a href="mailto:support@citabooking.com" className="text-zinc-500 hover:text-[#0f172a] text-sm font-medium transition-colors">
               support@citabooking.com
