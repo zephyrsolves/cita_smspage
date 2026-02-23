@@ -5,6 +5,7 @@ import DemoBooking from "./pages/DemoBooking";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookieNotice from "./pages/CookieNotice";
+import MessagingPolicy from "./pages/MessagingPolicy";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/terms" component={TermsOfService} />
         <Route path="/privacy" component={PrivacyPolicy} />
         <Route path="/cookies" component={CookieNotice} />
+        <Route path="/messaging-policy" component={MessagingPolicy} />
         <Route>
           <div className="min-h-screen flex items-center justify-center">
             <p className="text-gray-500">Page not found</p>
