@@ -172,14 +172,28 @@ export default function DemoBooking() {
                 className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-gray-900 placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]"
               />
               {/* SMS Disclosure — directly under phone field */}
-              <div className="mt-2 flex gap-2 p-3 bg-blue-50 rounded-lg border border-blue-100">
-                <MessageSquare className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
-                <p className="text-xs text-blue-800 leading-relaxed">
-                  {t(
-                    "By providing your phone number, you agree to receive appointment-related text messages from this business, including confirmations and reminders. Message frequency varies. Message & data rates may apply. Reply STOP to opt out, HELP for help.",
-                    "Al proporcionar tu n\u00famero de tel\u00e9fono, aceptas recibir mensajes de texto relacionados con citas de este negocio, incluyendo confirmaciones y recordatorios. La frecuencia var\u00eda. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para cancelar, HELP para ayuda."
-                  )}
-                </p>
+              <div className="mt-2 p-3 bg-blue-50 rounded-lg border border-blue-100">
+                <div className="flex gap-2">
+                  <MessageSquare className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
+                  <p className="text-xs text-blue-800 leading-relaxed">
+                    {t(
+                      "By providing your phone number, you agree to receive appointment-related text messages sent via CitaBooking on behalf of this business, including confirmations and reminders. Message frequency varies. Message & data rates may apply. Reply STOP to opt out, HELP for help.",
+                      "Al proporcionar tu número de teléfono, aceptas recibir mensajes de texto relacionados con citas enviados a través de CitaBooking en nombre de este negocio, incluyendo confirmaciones y recordatorios. La frecuencia varía. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para cancelar, HELP para ayuda."
+                    )}
+                  </p>
+                </div>
+                <label className="flex items-start gap-2 mt-3 pt-3 border-t border-blue-100 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="mt-0.5 h-4 w-4 rounded border-blue-300 text-[#0f172a] focus:ring-[#0f172a]/20 shrink-0"
+                  />
+                  <span className="text-xs text-blue-800 leading-relaxed">
+                    {t(
+                      "I agree to receive SMS notifications for this appointment.",
+                      "Acepto recibir notificaciones SMS para esta cita."
+                    )}
+                  </span>
+                </label>
               </div>
             </div>
 
