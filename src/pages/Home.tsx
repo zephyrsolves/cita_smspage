@@ -121,7 +121,7 @@ export default function Home() {
             {/* Social link */}
             <div className="mt-6" style={{ animation: "fadeInUp 0.7s ease-out 800ms both" }}>
               <a
-                href="https://instagram.com/citabooking"
+                href="https://www.instagram.com/citabooking_app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-500 hover:text-[#0f172a] transition-colors"
