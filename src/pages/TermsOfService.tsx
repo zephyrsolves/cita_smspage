@@ -351,8 +351,8 @@ export default function TermsOfService() {
             </h3>
             <p className="text-[var(--slate)] leading-relaxed">
               {isEn
-                ? "Message delivery depends on third-party carriers and is not guaranteed. CitaBooking is not liable for undelivered messages or carrier filtering. You agree not to use the Service to send unlawful, spammy, or deceptive messages."
-                : "La entrega de mensajes depende de operadores de terceros y no está garantizada. CitaBooking no es responsable por mensajes no entregados o filtrado por operadores. Usted acepta no usar el Servicio para enviar mensajes ilegales, spam o engañosos."}
+                ? "Message delivery depends on third-party carriers and is not guaranteed. Delivery of SMS messages is subject to carrier network availability and may be delayed or fail. CitaBooking and carriers are not liable for delayed or undelivered messages. You agree not to use the Service to send unlawful, spammy, or deceptive messages."
+                : "La entrega de mensajes depende de operadores de terceros y no está garantizada. La entrega de mensajes SMS está sujeta a la disponibilidad de la red del operador y puede retrasarse o fallar. CitaBooking y los operadores no son responsables por mensajes retrasados o no entregados. Usted acepta no usar el Servicio para enviar mensajes ilegales, spam o engañosos."}
             </p>
           </section>
 
