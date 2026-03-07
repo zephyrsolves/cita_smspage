@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { CitaBookingLogo } from "../components/CitaBookingLogo";
-import { Calendar, Clock, User, Phone, Mail, ChevronDown, MessageSquare, ShieldCheck, HelpCircle } from "lucide-react";
+import { Calendar, Clock, User, Phone, Mail, ChevronDown, ShieldCheck, HelpCircle } from "lucide-react";
 
 const SERVICES = [
   { name: "Wax Appointment", nameEs: "Cita de Depilaci\u00f3n", duration: "30 min", price: "$45" },
@@ -171,28 +171,27 @@ export default function DemoBooking() {
                 placeholder="(555) 123-4567"
                 className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-gray-900 placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]"
               />
-              {/* SMS Disclosure — directly under phone field */}
-              <div className="mt-2 p-3 bg-blue-50 rounded-lg border border-blue-100">
-                <div className="flex gap-2">
-                  <MessageSquare className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
-                  <p className="text-xs text-blue-800 leading-relaxed">
-                    {t(
-                      "By providing your phone number, you agree to receive appointment-related text messages sent via CitaBooking on behalf of this business, including confirmations and reminders. Message frequency varies. Message & data rates may apply. Reply STOP to opt out, HELP for help.",
-                      "Al proporcionar tu número de teléfono, aceptas recibir mensajes de texto relacionados con citas enviados a través de CitaBooking en nombre de este negocio, incluyendo confirmaciones y recordatorios. La frecuencia varía. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para cancelar, HELP para ayuda."
-                    )}
-                  </p>
-                </div>
-                <label className="flex items-start gap-2 mt-3 pt-3 border-t border-blue-100 cursor-pointer">
+              {/* SMS Consent — checkbox is the primary CTA */}
+              <div className="mt-3 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                <label className="flex items-start gap-3 cursor-pointer">
                   <input
                     type="checkbox"
                     className="mt-0.5 h-4 w-4 rounded border-blue-300 text-[#0f172a] focus:ring-[#0f172a]/20 shrink-0"
                   />
-                  <span className="text-xs text-blue-800 leading-relaxed">
-                    {t(
-                      "I agree to receive SMS notifications for this appointment.",
-                      "Acepto recibir notificaciones SMS para esta cita."
-                    )}
-                  </span>
+                  <div className="space-y-1">
+                    <span className="text-sm font-medium text-gray-800 leading-relaxed">
+                      {t(
+                        "I agree to receive appointment notifications via SMS from this business.",
+                        "Acepto recibir notificaciones de citas vía SMS de este negocio."
+                      )}
+                    </span>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      {t(
+                        "By checking this box, you agree to receive appointment-related SMS from this business via CitaBooking, including confirmations and reminders. Msg & data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase.",
+                        "Al marcar esta casilla, aceptas recibir SMS relacionados con citas de este negocio a través de CitaBooking, incluyendo confirmaciones y recordatorios. Pueden aplicarse tarifas de mensajes y datos. La frecuencia varía. Responde STOP para cancelar, HELP para ayuda. El consentimiento no es condición de compra."
+                      )}
+                    </p>
+                  </div>
                 </label>
               </div>
             </div>
@@ -220,8 +219,8 @@ export default function DemoBooking() {
           {/* Consent under button */}
           <p className="text-[11px] text-gray-400 text-center leading-relaxed">
             {t(
-              "By clicking Confirm, you agree to the terms below. Consent is not a condition of purchase.",
-              "Al hacer clic en Confirmar, aceptas los t\u00e9rminos a continuaci\u00f3n. El consentimiento no es una condici\u00f3n de compra."
+              "By clicking Confirm, you agree to our Terms of Service and Privacy Policy.",
+              "Al hacer clic en Confirmar, aceptas nuestros Términos de Servicio y Política de Privacidad."
             )}
           </p>
         </div>

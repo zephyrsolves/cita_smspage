@@ -24,7 +24,7 @@ export default function MessagingPolicy() {
           {isEn ? "Messaging Policy (SMS)" : "Política de Mensajería (SMS)"}
         </h1>
         <p className="text-[var(--slate)] mb-8">
-          {isEn ? "Last updated: February 22, 2026" : "Última actualización: 22 de febrero de 2026"}
+          {isEn ? "Last updated: March 7, 2026" : "Última actualización: 7 de marzo de 2026"}
         </p>
 
         <div className="prose prose-slate max-w-none space-y-8">
@@ -64,10 +64,15 @@ export default function MessagingPolicy() {
               <li>
                 <strong>{isEn ? "Clients:" : "Clientes:"}</strong>{" "}
                 {isEn
-                  ? "Clients opt in by providing their phone number during booking or account setup and agreeing to receive appointment-related text messages from the business."
-                  : "Los clientes aceptan al proporcionar su número de teléfono durante la reserva o configuración de cuenta y aceptar recibir mensajes de texto relacionados con citas del negocio."}
+                  ? "Clients opt in by checking a required SMS consent checkbox during the booking process. The checkbox states: \"I agree to receive appointment notifications via SMS from this business.\" The checkbox is unchecked by default and must be actively selected by the client. Consent is not a condition of booking or purchase."
+                  : "Los clientes aceptan al marcar una casilla obligatoria de consentimiento SMS durante el proceso de reserva. La casilla indica: \"Acepto recibir notificaciones de citas vía SMS de este negocio.\" La casilla está desmarcada por defecto y debe ser seleccionada activamente por el cliente. El consentimiento no es condición para reservar o comprar."}
               </li>
             </ul>
+            <p className="text-[var(--slate)] leading-relaxed mt-3">
+              {isEn
+                ? "The opt-in message displayed to clients reads: \"By checking this box, you agree to receive appointment-related SMS from this business via CitaBooking, including confirmations and reminders. Msg & data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase.\""
+                : "El mensaje de consentimiento mostrado a los clientes dice: \"Al marcar esta casilla, aceptas recibir SMS relacionados con citas de este negocio a través de CitaBooking, incluyendo confirmaciones y recordatorios. Pueden aplicarse tarifas de mensajes y datos. La frecuencia varía. Responde STOP para cancelar, HELP para ayuda. El consentimiento no es condición de compra.\""}
+            </p>
           </section>
 
           {/* Message Frequency */}
